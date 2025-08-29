@@ -28,7 +28,7 @@
                 <img src="./assets/heart.png" alt="" class="w-[25px] h-[25px]">
             </div>
             <div class="flex justify-center bg-green-50 text-[#000000] px-7 py-3.5 rounded-full items-center space-x-[10px]">
-                <span class="font-extrabold inter-font text-[16px]">100</span>
+                <span id="total-coin" class="font-extrabold inter-font text-[16px]">200</span>
                 <img src="./assets/coin.png" alt="" class="w-[25px] h-[25px]">
             </div>
             <button class="flex bg-[#00A63E] text-white px-8 py-3.5 rounded-full items-center space-x-[10px]  inter-font cursor-pointer">
@@ -39,12 +39,12 @@
     </header>
 
     <!-- Banner Section -->
-    <section class="bg-radial from-[#006747] to-[#013223] text-white py-4 text-center relative">
+    <section class="bg-radial from-[#006747] to-[#013223] text-white py-5 text-center relative">
         <div class="absolute left-1/2 transform -translate-x-1/2">
             <img src="./assets/logo-dark.png" alt="Government Seal" class="h-20 w-20 rounded-full border-4 border-white">
         </div>
 
-        <div class="mt-24 container mx-auto">
+        <div class="mt-25 mb-5 container mx-auto">
             <h2 class="text-4xl hind-madurai-bold mb-6">Emergency Service Directory</h2>
             <p class="text-xl hind-madurai-semibold ">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
         </div>
@@ -69,11 +69,11 @@
                         </button> 
                     </div>
                     <div>
-                        <h3 class="hind-madurai-bold text-[#111111] text-xl leading-none">National Emergency Number</h3>
+                        <h3 id="emergency-service" class="hind-madurai-bold text-[#111111] text-xl leading-none">National Emergency Number</h3>
                         <p class="text-sm text-gray-500">National Emergency</p>
                     </div>
 
-                    <div class="text-2xl font-bold text-gray-900 mt-3 ">999</div>
+                    <div id="emergency-service-number" class="text-2xl font-bold text-gray-900 mt-3 ">999</div>
                     <div class="bg-gray-100 w-11 h-7 rounded-full mb-5 flex justify-center items-center">
                         <p class="hind-madurai-regular tex-[18px]">All</p>
                     </div>
@@ -83,7 +83,7 @@
                             <i class="fa-regular fa-copy"></i>
                             Copy
                         </button>
-                        <button class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base">
+                        <button id="emergency-call-btn" class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base cursor-pointer">
                             <i class="fa-solid fa-phone text-[13px] mr-1"></i>
                             Call
                         </button>
@@ -102,11 +102,11 @@
                         </button> 
                     </div>
                     <div>
-                        <h3 class="hind-madurai-bold text-[#111111] text-xl leading-none">Police Helpline Number</h3>
+                        <h3 id="police-helpline" class="hind-madurai-bold text-[#111111] text-xl leading-none">Police Helpline Number</h3>
                         <p class="text-sm text-gray-500">Police</p>
                     </div>
 
-                    <div class="text-2xl font-bold text-gray-900 mt-3 ">999</div>
+                    <div id="police-helpline-number" class="text-2xl font-bold text-gray-900 mt-3 ">999</div>
                     <div class="bg-gray-100 w-15 h-7 rounded-full mb-5 flex justify-center items-center">
                         <p class="hind-madurai-regular tex-[18px]">Police</p>
                     </div>
@@ -116,7 +116,7 @@
                             <i class="fa-regular fa-copy"></i>
                             Copy
                         </button>
-                        <button class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base">
+                        <button id="police-call-btn" class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base cursor-pointer">
                             <i class="fa-solid fa-phone text-[13px] mr-1"></i>
                             Call
                         </button>
@@ -135,11 +135,11 @@
                         </button> 
                     </div>
                     <div>
-                        <h3 class="hind-madurai-bold text-[#111111] text-xl leading-none">Fire Service Number</h3>
+                        <h3 id="fire-service" class="hind-madurai-bold text-[#111111] text-xl leading-none">Fire Service Number</h3>
                         <p class="text-sm text-gray-500">Fire Service</p>
                     </div>
 
-                    <div class="text-2xl font-bold text-gray-900 mt-3 ">999</div>
+                    <div id="fire-service-number" class="text-2xl font-bold text-gray-900 mt-3 ">999</div>
                     <div class="bg-gray-100 w-15 h-7 rounded-full mb-5 flex justify-center items-center">
                         <p class="hind-madurai-regular tex-[18px]">Fire</p>
                     </div>
@@ -149,7 +149,7 @@
                             <i class="fa-regular fa-copy"></i>
                             Copy
                         </button>
-                        <button class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base">
+                        <button id="fire-call-btn" class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base cursor-pointer">
                             <i class="fa-solid fa-phone text-[13px] mr-1"></i>
                             Call
                         </button>
@@ -168,11 +168,11 @@
                         </button> 
                     </div>
                     <div>
-                        <h3 class="hind-madurai-bold text-[#111111] text-xl leading-none">Ambulance Service</h3>
+                        <h3 id="ambulance-service" class="hind-madurai-bold text-[#111111] text-xl leading-none">Ambulance Service</h3>
                         <p class="text-sm text-gray-500">Ambulance</p>
                     </div>
 
-                    <div class="text-2xl font-bold text-gray-900 mt-3 ">1994-999999</div>
+                    <div id="ambulance-service-number" class="text-2xl font-bold text-gray-900 mt-3 ">1994-999999</div>
                     <div class="bg-gray-100 w-15 h-7 rounded-full mb-5 flex justify-center items-center">
                         <p class="hind-madurai-regular tex-[18px]">Health</p>
                     </div>
@@ -182,7 +182,7 @@
                             <i class="fa-regular fa-copy"></i>
                             Copy
                         </button>
-                        <button class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base">
+                        <button id="ambulance-call-btn" class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base cursor-pointer">
                             <i class="fa-solid fa-phone text-[13px] mr-1"></i>
                             Call
                         </button>
@@ -201,11 +201,11 @@
                         </button> 
                     </div>
                     <div>
-                        <h3 class="hind-madurai-bold text-[#111111] text-xl leading-none">Women & Child Helpline</h3>
+                        <h3 id="wo&child-helpline" class="hind-madurai-bold text-[#111111] text-xl leading-none">Women & Child Helpline</h3>
                         <p class="text-sm text-gray-500">Women & Child Helpline</p>
                     </div>
 
-                    <div class="text-2xl font-bold text-gray-900 mt-3 ">109</div>
+                    <div id="wo&child-helpline-number" class="text-2xl font-bold text-gray-900 mt-3 ">109</div>
                     <div class="bg-gray-100 w-12 h-7 rounded-full mb-5 flex justify-center items-center">
                         <p class="hind-madurai-regular tex-[18px]">Help</p>
                     </div>
@@ -215,7 +215,7 @@
                             <i class="fa-regular fa-copy"></i>
                             Copy
                         </button>
-                        <button class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base">
+                        <button id="wo&child-call-btn" class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base cursor-pointer">
                             <i class="fa-solid fa-phone text-[13px] mr-1"></i>
                             Call
                         </button>
@@ -234,11 +234,11 @@
                         </button> 
                     </div>
                     <div>
-                        <h3 class="hind-madurai-bold text-[#111111] text-xl leading-none">Anti-Corruption Helpline</h3>
+                        <h3 id="anti-corruption-helpline" class="hind-madurai-bold text-[#111111] text-xl leading-none">Anti-Corruption Helpline</h3>
                         <p class="text-sm text-gray-500">Anti-Corruption</p>
                     </div>
 
-                    <div class="text-2xl font-bold text-gray-900 mt-3 ">106</div>
+                    <div id="anti-corruption-helpline-number" class="text-2xl font-bold text-gray-900 mt-3 ">106</div>
                     <div class="bg-gray-100 w-12 h-7 rounded-full mb-5 flex justify-center items-center">
                         <p class="hind-madurai-regular tex-[18px]">Govt.</p>
                     </div>
@@ -248,7 +248,7 @@
                             <i class="fa-regular fa-copy"></i>
                             Copy
                         </button>
-                        <button class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base">
+                        <button id="anti-corruption-call-btn" class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base cursor-pointer">
                             <i class="fa-solid fa-phone text-[13px] mr-1"></i>
                             Call
                         </button>
@@ -267,11 +267,11 @@
                         </button> 
                     </div>
                     <div>
-                        <h3 class="hind-madurai-bold text-[#111111] text-xl leading-none">Electricity Helpline Helpline</h3>
+                        <h3 id="electricity-helpline" class="hind-madurai-bold text-[#111111] text-xl leading-none">Electricity Helpline</h3>
                         <p class="text-sm text-gray-500">Electricity Outage</p>
                     </div>
 
-                    <div class="text-2xl font-bold text-gray-900 mt-3 ">16216</div>
+                    <div id="electricity-helpline-number" class="text-2xl font-bold text-gray-900 mt-3 ">16216</div>
                     <div class="bg-gray-100 w-20 h-7 rounded-full mb-5 flex justify-center items-center">
                         <p class="hind-madurai-regular tex-[18px]">Electricity </p>
                     </div>
@@ -281,7 +281,7 @@
                             <i class="fa-regular fa-copy"></i>
                             Copy
                         </button>
-                        <button class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base">
+                        <button id="electricity-call-btn" class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base cursor-pointer">
                             <i class="fa-solid fa-phone text-[13px] mr-1"></i>
                             Call
                         </button>
@@ -300,11 +300,11 @@
                         </button> 
                     </div>
                     <div>
-                        <h3 class="hind-madurai-bold text-[#111111] text-xl leading-none">Brac Helpline</h3>
+                        <h3 id="brac-helpline" class="hind-madurai-bold text-[#111111] text-xl leading-none">Brac Helpline</h3>
                         <p class="text-sm text-gray-500">Brac</p>
                     </div>
 
-                    <div class="text-2xl font-bold text-gray-900 mt-3 ">16445</div>
+                    <div id="brac-helpline-number" class="text-2xl font-bold text-gray-900 mt-3 ">16445</div>
                     <div class="bg-gray-100 w-11 h-7 rounded-full mb-5 flex justify-center items-center">
                         <p class="hind-madurai-regular tex-[18px]">NGO</p>
                     </div>
@@ -314,7 +314,7 @@
                             <i class="fa-regular fa-copy"></i>
                             Copy
                         </button>
-                        <button class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base">
+                        <button id="brac-call-btn" class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base cursor-pointer">
                             <i class="fa-solid fa-phone text-[13px] mr-1"></i>
                             Call
                         </button>
@@ -333,11 +333,11 @@
                         </button> 
                     </div>
                     <div>
-                        <h3 class="hind-madurai-bold text-[#111111] text-xl leading-none">Bangladesh Railway Helpline</h3>
+                        <h3 id="railway-helpline" class="hind-madurai-bold text-[#111111] text-xl leading-none">Bangladesh Railway Helpline</h3>
                         <p class="text-sm text-gray-500">Bangladesh Railway</p>
                     </div>
 
-                    <div class="text-2xl font-bold text-gray-900 mt-3 ">163</div>
+                    <div id="railway-helpline-number" class="text-2xl font-bold text-gray-900 mt-3 ">163</div>
                     <div class="bg-gray-100 w-15 h-7 rounded-full mb-5 flex justify-center items-center">
                         <p class="hind-madurai-regular tex-[18px]">Travel</p>
                     </div>
@@ -347,7 +347,7 @@
                             <i class="fa-regular fa-copy"></i>
                             Copy
                         </button>
-                        <button class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base">
+                        <button id="railway-call-btn" class="flex-1 bg-green-600 text-white rounded-lg py-1.5 hover:bg-green-700 text-sm leading-base cursor-pointer">
                             <i class="fa-solid fa-phone text-[13px] mr-1"></i>
                             Call
                         </button>
@@ -363,29 +363,15 @@
                         <i class="fa-regular fa-clock"></i>
                         Call History
                     </h2>
-                    <button class="bg-[#00A63E] text-white px-7 py-3 rounded-full items-center inter-font cursor-pointer">
+                    <button id="history-clear" class="bg-[#00A63E] text-white px-7 py-3 rounded-full items-center inter-font cursor-pointer">
                         Clear
                     </button>
                 </div>
 
-                <div class="bg-gray-100 p-3 rounded-md flex justify-between items-center mb-3">
-                    <div class="space-y-1">
-                        <h1 class="text-[15px] font-bold">Fire Service Number</h1>
-                        <p class="text-sm">999</p>
-                    </div>
-                    <div>
-                        <p>11:36:58 AM</p>
-                    </div>
+                <div id="history-container">
+
                 </div>
-                <div class="bg-gray-100 p-3 rounded-md flex justify-between items-center mb-3">
-                    <div class="space-y-1">
-                        <h1 class="text-[15px] font-bold">Fire Service Number</h1>
-                        <p class="text-sm">999</p>
-                    </div>
-                    <div>
-                        <p>11:36:58 AM</p>
-                    </div>
-                </div>
+                
             </div>
             
         </div>
