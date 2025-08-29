@@ -3,28 +3,13 @@ async function getExactTime() {
   try {
     const response = await fetch("https://worldtimeapi.org/api/timezone/Etc/UTC");
     const data = await response.json();
-    return data.datetime; // returns ISO string: e.g., "2025-08-29T14:25:39.123456+00:00"
+    return data.datetime;
   } catch (error) {
     console.error("Failed to get exact time:", error);
     return new Date().toISOString(); // fallback
   }
 }
 
-
-let lifeLine = 0;
-
-const transactionData = [];
-
-
-const lifeLineStore = document.getElementById("lifeLineStore");
-const buttons = document.querySelectorAll(".increment-btn");
-
-for (const btn of buttons) {
-  btn.addEventListener("click", function () {
-    lifeLine++;
-    lifeLineStore.innerText = lifeLine;
-  });
-}
 
 // function to get innertext
 function getInnerText(id) {
@@ -40,7 +25,24 @@ function setInnerText(value) {
 
 
 
-// Call Function
+// Life Line Counter Section
+let totalLifeLine = 0;
+
+const lifeLineStore = document.getElementById("lifeLineStore");
+const buttons = document.querySelectorAll(".increment-btn");
+
+for (const btn of buttons) {
+  btn.addEventListener("click", function () {
+    totalLifeLine++;
+    lifeLineStore.innerText = totalLifeLine;
+  });
+}
+
+
+
+// Call Related Section
+const transactionData = [];
+
 function callButton(id, name, number) {
   document
     .getElementById(id)
@@ -101,7 +103,7 @@ function callButton(id, name, number) {
     });
 }
 
-// Call Button
+// Call function
 callButton("emergency-call-btn", "emergency-service", "emergency-service-number");
 callButton("police-call-btn", "police-helpline", "police-helpline-number");
 callButton("fire-call-btn", "fire-service", "fire-service-number");
@@ -115,7 +117,7 @@ callButton("railway-call-btn", "railway-helpline", "railway-helpline-number");
 
 
 
-// History Clear Button
+// History Clear Button 
 document.getElementById("history-clear").addEventListener("click", function(){
   const historyContainer = document.getElementById("history-container");
   const confirmClear = confirm("Are you sure to delete the history?");
@@ -125,3 +127,36 @@ document.getElementById("history-clear").addEventListener("click", function(){
   }
 });
 
+
+
+// Copy Section
+let totalCopy = 0;
+
+function CopyButton(id, number) {
+  document
+    .getElementById(id)
+    .addEventListener("click", function () {
+
+      const copyStore = document.getElementById("total-copy");
+      const serviceNumber = document.getElementById(number).innerText;
+      const confirmCopy = confirm("Are you sure you want to copy this number?");
+
+      if(confirmCopy) {
+        navigator.clipboard.writeText(serviceNumber);
+        totalCopy++;
+        copyStore.innerText = totalCopy;
+      }
+    });
+}
+
+
+// Copy function call
+CopyButton("emergency-copy-btn", "emergency-service-number");
+CopyButton("police-copy-btn", "police-helpline-number");
+CopyButton("fire-copy-btn", "fire-service-number");
+CopyButton("ambulance-copy-btn", "ambulance-service-number");
+CopyButton("wo&child-copy-btn", "wo&child-helpline-number");
+CopyButton("anti-corruption-copy-btn", "anti-corruption-helpline-number");
+CopyButton("electricity-copy-btn", "electricity-helpline-number");
+CopyButton("brac-copy-btn", "brac-helpline-number");
+CopyButton("railway-copy-btn", "railway-helpline-number");
