@@ -1,6 +1,20 @@
+// Api For exact time
+async function getExactTime() {
+  try {
+    const response = await fetch("https://worldtimeapi.org/api/timezone/Etc/UTC");
+    const data = await response.json();
+    return data.datetime; // returns ISO string: e.g., "2025-08-29T14:25:39.123456+00:00"
+  } catch (error) {
+    console.error("Failed to get exact time:", error);
+    return new Date().toISOString(); // fallback
+  }
+}
+
+
 let lifeLine = 0;
 
 const transactionData = [];
+
 
 const lifeLineStore = document.getElementById("lifeLineStore");
 const buttons = document.querySelectorAll(".increment-btn");
@@ -30,7 +44,7 @@ function setInnerText(value) {
 function callButton(id, name, number) {
   document
     .getElementById(id)
-    .addEventListener("click", function () {
+    .addEventListener("click", async function () {
 
       const availableBalance = getInnerText("total-coin");
 
@@ -48,11 +62,14 @@ function callButton(id, name, number) {
       const totalNewAvailableBalance = availableBalance - 20;
       setInnerText(totalNewAvailableBalance);
 
+      // For Exect time
+      const exactTime = await getExactTime();
+
       // History Store
       const history = {
         name: serviceName,
         number: serviceNumber,
-        date: new Date().toLocaleTimeString(),
+        date: new Date(exactTime).toLocaleTimeString(),
       };
 
       transactionData.push(history);
